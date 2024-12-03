@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">SWE_ISP</string>
+    <string name="app_name">ISP</string>
+    <string name="title_activity_p1_programs">Programs</string>
 </resources>
