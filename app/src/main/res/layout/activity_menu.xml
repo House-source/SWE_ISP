@@ -90,12 +90,13 @@
             android:id="@+id/button_7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:src="@drawable/logo_info"
-            android:contentDescription="Info"
-            android:layout_margin="8dp"
             android:layout_column="1"
-            android:background="#FF0000"/>
-
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#FF0000"
+            android:contentDescription="Info"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:src="@drawable/logo_info" />
     </GridLayout>
 </LinearLayout>
