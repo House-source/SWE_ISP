@@ -1,4 +1,4 @@
-Android app designed for the "Institute of the South Pacific" for Sofware Engineering class.
+Android app designed for the "Institute of the South Pacific" for Software Engineering class.
 
 Features:
 
