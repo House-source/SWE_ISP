@@ -5,6 +5,10 @@
         android:name="android.permission.INTERNET"/>
     <uses-permission
         android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -61,9 +65,16 @@
             android:theme="@style/Theme.SWE_ISP" />
         <activity
             android:name=".p5_contacts.P5_Main"
-            android:exported="false"
+            android:exported="true"
             android:label="Contacts"
-            android:theme="@style/Theme.SWE_ISP" />
+            android:theme="@style/Theme.SWE_ISP">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".p5_contacts.WebIntent"></activity>
         <activity
             android:name=".p6_news.P6_Main"
             android:exported="true"
