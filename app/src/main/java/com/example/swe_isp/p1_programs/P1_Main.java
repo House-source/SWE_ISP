@@ -1,4 +1,4 @@
-package com.example.swe_isp;
+package com.example.swe_isp.p1_programs;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +21,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 
+import com.example.swe_isp.R;
+
 public class P1_Main extends AppCompatActivity {
 
     static final String[] PROGRAMS = new String[] { "Architectural",
@@ -35,10 +37,10 @@ public class P1_Main extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_p1);
+        setContentView(R.layout.p1_main);
 
         ListView programListView = (ListView) findViewById(R.id.programListView);
-        programListView.setAdapter(new P1_ProgramAdapter(this, PROGRAMS));
+        programListView.setAdapter(new ProgramAdapter(this, PROGRAMS));
         programListView.setTextFilterEnabled(true);
 
         programListView.setOnItemClickListener(new OnItemClickListener() {
@@ -131,7 +133,7 @@ public class P1_Main extends AppCompatActivity {
                         setTitle("Error").setMessage("No Courses Found").
                         setNeutralButton("Close", null).show();
             else {
-                Intent coursesScreen = new Intent(getApplicationContext(), P1_CoursesActivity.class);
+                Intent coursesScreen = new Intent(getApplicationContext(), CoursesActivity.class);
                 coursesScreen.putExtra("source", src);
                 coursesScreen.putExtra("programTitle", title);
                 startActivity(coursesScreen);

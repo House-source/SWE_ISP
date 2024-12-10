@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".P4_Transit">
+    tools:context=".p4_transit.P4_Main">
 
     <!-- WebView to load the webpage -->
     <WebView

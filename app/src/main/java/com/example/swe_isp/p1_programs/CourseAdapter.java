@@ -1,4 +1,4 @@
-package com.example.swe_isp;
+package com.example.swe_isp.p1_programs;
 
 /**
  * Created by admin on 2018-07-19.
@@ -13,14 +13,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class P1_CourseAdapter extends SimpleAdapter  {
+import com.example.swe_isp.R;
+
+public class CourseAdapter extends SimpleAdapter  {
     private Context context;
     private List<? extends Map<String, String>> items;
     private int resource;
 
 
-    public P1_CourseAdapter(Context context, List<? extends Map<String, String>> items,
-                            int resource, String[] from, int[] to) {
+    public CourseAdapter(Context context, List<? extends Map<String, String>> items,
+                         int resource, String[] from, int[] to) {
 
         super(context, items, resource, from, to);
 

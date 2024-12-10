@@ -1,14 +1,14 @@
-package com.example.swe_isp;
+package com.example.swe_isp.p1_programs;
 
 /**
  * Created by admin on 2018-07-19.
  */
 
-class P1_Course {
+class Course {
     private String cname, cid;
     private String credit, lect, lab;
 
-    public P1_Course(String cid, String cname, String credit, String lect, String lab) {
+    public Course(String cid, String cname, String credit, String lect, String lab) {
         this.cid = cid;
         this.cname = cname;
         this.credit = credit;

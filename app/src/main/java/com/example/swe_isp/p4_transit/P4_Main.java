@@ -1,4 +1,4 @@
-package com.example.swe_isp;
+package com.example.swe_isp.p4_transit;
 
 import android.os.Bundle;
 import android.webkit.WebSettings;
@@ -6,12 +6,14 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class P4_Transit extends AppCompatActivity {
+import com.example.swe_isp.R;
+
+public class P4_Main extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_p4);  // Set the layout with WebView
+        setContentView(R.layout.p4_main);  // Set the layout with WebView
 
         // Initialize the WebView
         WebView webView = findViewById(R.id.webView);

@@ -1,4 +1,4 @@
-package com.example.swe_isp;
+package com.example.swe_isp.p1_programs;
 
 /**
  * Created by admin on 2018-07-19.
@@ -22,10 +22,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class P1_CoursesActivity extends AppCompatActivity {
+import com.example.swe_isp.R;
+
+public class CoursesActivity extends AppCompatActivity {
     private String source = null;
     private String programTitle = null;
-    private ArrayList<P1_Course>[] courses;
+    private ArrayList<Course>[] courses;
     private int numberOfSections;
 
     public final static String ITEM_TITLE = "cid";
@@ -69,7 +71,7 @@ public class P1_CoursesActivity extends AppCompatActivity {
         }
 
         ListView coursesListView = (ListView) findViewById(R.id.coursesListView);
-        coursesListView.setAdapter(new P1_CourseAdapter(this, data, R.layout.p1_coursesrowlist,
+        coursesListView.setAdapter(new CourseAdapter(this, data, R.layout.p1_coursesrowlist,
                 new String[] { ITEM_TITLE, ITEM_CAPTION }, new int[] { R.id.subtextid, R.id.textid }));
         coursesListView.setTextFilterEnabled(true);
         coursesListView.setOnItemClickListener(new OnItemClickListener() {
@@ -80,7 +82,7 @@ public class P1_CoursesActivity extends AppCompatActivity {
                 HashMap<String, String> item = (HashMap<String, String>) parent.getItemAtPosition(position);
                 String title = item.get(ITEM_TITLE);
 
-                P1_Course c = null;
+                Course c = null;
                 boolean b = false;
                 for(int i = 0; i < courses.length && !b; i++) {
                     for(int j = 0; j < courses[i].size() && !b; j++) {
@@ -97,7 +99,7 @@ public class P1_CoursesActivity extends AppCompatActivity {
                 String lect = c.getLect();
                 String lab = c.getLab();
 
-                Intent courseScreen = new Intent(getApplicationContext(), P1_CourseActivity.class);
+                Intent courseScreen = new Intent(getApplicationContext(), CourseActivity.class);
                 courseScreen.putExtra("cid", cid);
                 courseScreen.putExtra("cname", cname);
                 courseScreen.putExtra("credit", credit);
@@ -131,7 +133,7 @@ public class P1_CoursesActivity extends AppCompatActivity {
                     case XmlPullParser.START_TAG :
                         name = xpp.getName();
                         if(name.equals("semester")) {
-                            courses[semester] = new ArrayList<P1_Course>();
+                            courses[semester] = new ArrayList<Course>();
                             semester++;
                         }
                         else if(name.equals("cid")) {
@@ -149,7 +151,7 @@ public class P1_CoursesActivity extends AppCompatActivity {
                         else if(name.equals("lab")) {
                             lab = xpp.nextText();
                             int index = semester - 1;
-                            P1_Course c = new P1_Course(cid, cname, credit, lect, lab);
+                            Course c = new Course(cid, cname, credit, lect, lab);
                             courses[index].add(c);
                         }
                 }

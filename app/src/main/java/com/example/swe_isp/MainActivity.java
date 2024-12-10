@@ -7,6 +7,14 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.swe_isp.p3_calendar.P3_Main;
+import com.example.swe_isp.p1_programs.P1_Main;
+import com.example.swe_isp.p2_schedule.P2_Main;
+import com.example.swe_isp.p4_transit.P4_Main;
+import com.example.swe_isp.p5_contacts.P5_Main;
+import com.example.swe_isp.p6_news.P6_Main;
+import com.example.swe_isp.p7_info.P7_Main;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -35,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, P2_Schedule.class);
+                Intent intent = new Intent(MainActivity.this, P2_Main.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, P3_Calendar.class);
+                Intent intent = new Intent(MainActivity.this, P3_Main.class);
                 startActivity(intent);
             }
         });
@@ -51,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, P4_Transit.class);
+                Intent intent = new Intent(MainActivity.this, P4_Main.class);
                 startActivity(intent);
             }
         });
@@ -59,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, P5_Contacts.class);
+                Intent intent = new Intent(MainActivity.this, P5_Main.class);
                 startActivity(intent);
             }
         });
@@ -67,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, P6_News.class);
+                Intent intent = new Intent(MainActivity.this, P6_Main.class);
                 startActivity(intent);
             }
         });
@@ -75,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, P7_Info.class);
+                Intent intent = new Intent(MainActivity.this, P7_Main.class);
                 startActivity(intent);
             }
         });

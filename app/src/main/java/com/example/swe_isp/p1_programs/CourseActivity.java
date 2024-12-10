@@ -1,4 +1,4 @@
-package com.example.swe_isp;
+package com.example.swe_isp.p1_programs;
 
 /**
  * Created by admin on 2018-07-19.
@@ -8,7 +8,9 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
 
-public class P1_CourseActivity extends AppCompatActivity {
+import com.example.swe_isp.R;
+
+public class CourseActivity extends AppCompatActivity {
     private String cid, cname, credit, lect, lab;
 
     @Override

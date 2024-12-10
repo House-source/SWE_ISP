@@ -1,4 +1,4 @@
-package com.example.swe_isp;
+package com.example.swe_isp.p1_programs;
 
 /**
  * Created by admin on 2018-06-22.
@@ -11,11 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class P1_ProgramAdapter extends ArrayAdapter <String> {
+import com.example.swe_isp.R;
+
+public class ProgramAdapter extends ArrayAdapter <String> {
     private Context context;
     private String[] items;
 
-    public P1_ProgramAdapter(Context context, String[] items) {
+    public ProgramAdapter(Context context, String[] items) {
         super(context, R.layout.p1_rowlist, R.id.textid, items);
         this.context = context;
         this.items = items;
