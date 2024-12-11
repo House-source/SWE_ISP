@@ -57,9 +57,16 @@
             android:theme="@style/Theme.SWE_ISP" />
         <activity
             android:name=".p3_calendar.P3_Main"
-            android:exported="false"
+            android:exported="true"
             android:label="Calendar"
-            android:theme="@style/Theme.SWE_ISP" />
+            android:theme="@style/Theme.SWE_ISP">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".p3_calendar.EventActivity"></activity>
         <activity
             android:name=".p4_transit.P4_Main"
             android:exported="false"

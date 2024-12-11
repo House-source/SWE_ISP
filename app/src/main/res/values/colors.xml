@@ -6,4 +6,12 @@
     <color name="secondary_text">#757575</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#1F0000</color>
+    <color name="colorPrimaryDark">#1F0000</color>
+    <color name="colorAccent">#FF0000</color>
+
+    <color name="red_1">#1F0000</color>
+    <color name="red_5">#FF0000</color>
+
 </resources>

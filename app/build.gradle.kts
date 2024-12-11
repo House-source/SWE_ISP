@@ -1,7 +1,9 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    id("com.android.application")
+    id("kotlin-android")
+    id("com.jakewharton.butterknife")
+    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -18,8 +20,12 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    viewBinding {
+        enable = true
+    }
+
     buildTypes {
-        release {
+        getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -37,6 +43,7 @@ android {
     buildFeatures {
         compose = true
     }
+
 }
 
 dependencies {
@@ -52,6 +59,10 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
+    implementation(libs.material.calendar.view)
+    implementation("com.prolificinteractive:material-calendarview:1.4.3")
+    implementation("com.jakewharton:butterknife:10.2.3")
+    annotationProcessor("com.jakewharton:butterknife-compiler:10.2.3")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ISP</string>
     <string name="title_activity_p1_programs">Programs</string>
+    <string name="app_info">
+        "This app is meant to be a one-stop resource for all students attending, or looking to attend the Institute of the South Pacific.
+    </string>
+    <string name="Dev_info">
+        Developed by: Patrick Murphy and Ryan House
+    </string>
 </resources>
